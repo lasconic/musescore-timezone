@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title>Timezone</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.0.6/moment-timezone.min.js"></script>
+    <script src="moment-timezone-data.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <style>
+    .body {font-family: "SansSerif"}
+    .user {
+        font-weight: bold;
+    }
+    .time {
+        font-family: Consolas, monaco, monospace;
+        font-size: 18px;
+    }
+    </style>
+    <script>
+    function updateTime() {
+        var format = "h:mm:ss a";
+        $('#paris').html(moment().tz("Europe/Paris").format(format));
+        $('#denver').html(moment().tz("America/Denver").format(format));
+        $('#london').html(moment().tz("Europe/London").format(format));
+        $('#kolkata').html(moment().tz("Asia/Kolkata").format(format));
+    }
+    updateTime();
+     $(function () {
+        setInterval(updateTime, 1000);    
+     });
+        
+    </script>
+</head>
+<body>
+
+<div class="user">
+Miwarre, lasconic, bartlomiej
+</div>
+<div id="paris" class="time">
+</div>
+
+<br>
+
+<div class="user">
+Marc Sabatella
+</div>
+<div id="denver" class="time">
+</div>
+
+<br>
+
+<div class="user">
+jpirie, MarkRS
+</div>
+<div id="london" class="time">
+</div>
+
+<br>
+
+<div class="user">
+shredpub
+</div>
+<div id="kolkata" class="time">
+</div>
+
+</body>
+</html>
