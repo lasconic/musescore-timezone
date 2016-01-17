@@ -1,9 +1,8 @@
 <html>
 <head>
     <title>Timezone</title>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.6.0/moment.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.0.6/moment-timezone.min.js"></script>
-    <script src="moment-timezone-data.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/moment.min.js"></script>
+    <script src="moment-timezone-2010-2020.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <style>
     .body {font-family: "SansSerif"}
@@ -25,12 +24,13 @@
         $('#bucharest').html(moment().tz("Europe/Bucharest").format(format));
         $('#aqtau').html(moment().tz("Asia/Aqtau").format(format));
         $('#montreal').html(moment().tz("America/Montreal").format(format));
+        $('#mauritius').html(moment().tz("Indian/Mauritius").format(format));
     }
     updateTime();
      $(function () {
-        setInterval(updateTime, 1000);    
+        setInterval(updateTime, 1000);
      });
-        
+
     </script>
 </head>
 <body>
@@ -52,6 +52,13 @@ igevorse
 <br>
 
 <div class="user">
+lasconic
+</div>
+<div id="mauritius" class="time">
+</div>
+<br>
+
+<div class="user">
 Andreituicu
 </div>
 <div id="bucharest" class="time">
@@ -60,7 +67,7 @@ Andreituicu
 <br>
 
 <div class="user">
-Miwarre, lasconic, bartlomiej,<br/>
+Miwarre, bartlomiej,<br/>
 Jojo-Schmitz, briff, jim-newton,<br/>
 berteh
 </div>
@@ -78,7 +85,7 @@ jpirie, MarkRS
 <br>
 
 <div class="user">
-vgstef, craigfisher, kwwong 
+vgstef, craigfisher, kwwong
 </div>
 <div id="montreal" class="time">
 </div>
