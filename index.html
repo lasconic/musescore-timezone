@@ -16,11 +16,12 @@
     </style>
     <script>
     function updateTime() {
-        var format = "h:mm:ss a";
+        var format = "h:mm:ssa";
         $('#paris').html(moment().tz("Europe/Paris").format(format));
         $('#denver').html(moment().tz("America/Denver").format(format));
         $('#london').html(moment().tz("Europe/London").format(format));
         $('#kolkata').html(moment().tz("Asia/Kolkata").format(format));
+        $('#kaliningrad').html(moment().tz("Europe/Kaliningrad").format(format));
         $('#bucharest').html(moment().tz("Europe/Bucharest").format(format));
         $('#aqtau').html(moment().tz("Asia/Aqtau").format(format));
         $('#montreal').html(moment().tz("America/Montreal").format(format));
@@ -49,6 +50,14 @@ divya-urs, AryamanVinchhi
 igevorse
 </div>
 <div id="aqtau" class="time">
+</div>
+
+<br>
+
+<div class="user">
+Anatoly-os, DmitriyPopov
+</div>
+<div id="kaliningrad" class="time">
 </div>
 
 <br>
